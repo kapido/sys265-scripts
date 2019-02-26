@@ -4,4 +4,11 @@
 #adds a publik key to that users authorized keys file
 #remotes root ability to ssh
 
-echo "testing 123"
+
+read -p 'Username: ' uservar
+sudo useradd $uservar
+sudo mkdir /home/$uservar/.ssh
+sudo cp linux/public-keys/sys265.pub /home/$uservar/.ssh/authorized_keys
+sudo chmod 700 /home/$uservar/.ssh
+sudo chmod 600 /home/$uservar/.ssh/authorized_keys
+sudo chown -R $uservar:$uservar /home/$uservar/.ssh
