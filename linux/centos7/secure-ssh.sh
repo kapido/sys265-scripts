@@ -10,5 +10,5 @@ sudo useradd $uservar
 sudo mkdir /home/$uservar/.ssh
 sudo cp ../../linux/public-keys/sys265.pub /home/$uservar/.ssh
 sudo chmod 700 /home/$uservar/.ssh
-sudo chmod 600 /home/$uservar/.ssh/authorized_keys
+sudo chmod 600 /home/$uservar/.ssh/sys265.pub
 sudo chown -R $uservar:$uservar /home/$uservar/.ssh
